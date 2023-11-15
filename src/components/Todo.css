@@ -1,0 +1,87 @@
+.TodoInputTodo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20.4375rem;
+  height: 3rem;
+  padding: 0.87rem 1.25rem 0.87rem 1.25rem;
+  background: #fff;
+  border-radius: 0.5rem 0.5rem 0px 0px;
+  border-bottom: 0.01rem solid rgb(227, 228, 241);
+}
+.checkButton {
+  border: 0.01rem solid silver;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  background-color: transparent;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0 0.75rem 0 0;
+}
+
+.checkButton:hover {
+  cursor: pointer;
+}
+.iconCheck {
+  display: flex;
+  align-items: center;
+}
+.inputP {
+  max-width: 23rem;
+  font-size: 0.75rem;
+  letter-spacing: -0.0167rem;
+  overflow-wrap: break-word;
+  white-space: normal;
+
+  text-decoration: none;
+}
+.checkIcon.checked {
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.dark-mode .checkButton.completed + .inputP {
+  color: #4d5067;
+}
+.dark-mode .todo-input .dark-mode .inputP {
+  color: #c8cbe7;
+}
+.checkButton.completed + .inputP {
+  max-width: 23rem;
+  font-size: 0.75rem;
+  letter-spacing: -0.0167rem;
+  overflow-wrap: break-word;
+  white-space: normal;
+  color: rgb(209, 210, 218);
+  text-decoration: line-through;
+}
+.crossIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.itemsOutLine {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px 0px 0.5rem 0.5rem;
+  width: 20.4375rem;
+  height: 3rem;
+  padding: 0.87rem 1.25rem 0.87rem 1.25rem;
+  border-bottom: 0.01rem solid rgb(227, 228, 241);
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+}
+.items {
+  color: #9495a5;
+  font-size: 0.75rem;
+}
+.clearCompleted {
+  color: #9495a5;
+  text-align: right;
+  font-size: 0.75rem;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}

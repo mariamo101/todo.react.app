@@ -1,0 +1,7 @@
+.TodoHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 20.4375rem;
+  height: 1.5rem;
+}

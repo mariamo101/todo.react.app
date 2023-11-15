@@ -1,0 +1,47 @@
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+# testing
+/coverage
+# production
+/build
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Node.js specific
+node_modules/
+npm-debug.log
+yarn-error.log
+.yarn/
+# Build output
+build/
+dist/
+*.log
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Editor specific
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+# OS specific
+.DS_Store
+Thumbs.db
+# Dependency lock files
+package-lock.json
+yarn.lock
