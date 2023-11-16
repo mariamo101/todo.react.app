@@ -9,7 +9,6 @@ function App() {
       <div>
         <TodoHead />
         <TodoWrapper />
-        <TodoFooter />
         <h1>Drag and drop to reorder list</h1>
       </div>
     </div>

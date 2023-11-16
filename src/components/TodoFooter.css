@@ -22,6 +22,9 @@
   font-weight: 700;
   letter-spacing: -0.01213rem;
 }
+.showAll:hover,
+.showActive:hover,
+.showCompleted:hover,
 .showAll:focus,
 .showActive:focus,
 .showCompleted:focus {

@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Todo } from "./Todo";
 import { TodoForm } from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";
+import TodoFooter from "./TodoFooter";
 uuidv4();
 
 export const TodoWrapper = () => {
   const [todos, setTodos] = useState([]);
+  const [filterType, setFilterType] = useState("showAll");
 
   const addTodo = (todo) => {
     setTodos([
@@ -25,10 +27,12 @@ export const TodoWrapper = () => {
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
+
   useEffect(() => {
     const itemsLeft = todos.filter((todo) => !todo.completed).length;
     setItemsLeft(itemsLeft);
   }, [todos]);
+
   const [itemsLeft, setItemsLeft] = useState(0);
 
   const clearCompletedTodos = () => {
@@ -36,10 +40,21 @@ export const TodoWrapper = () => {
     setTodos(activeTodos);
   };
 
+  const filterTodos = () => {
+    switch (filterType) {
+      case "showActive":
+        return todos.filter((todo) => !todo.completed);
+      case "showCompleted":
+        return todos.filter((todo) => todo.completed);
+      default:
+        return todos;
+    }
+  };
+
   return (
     <div className="TodoWrapper">
       <TodoForm addTodo={addTodo} />
-      {todos.map((todo) => (
+      {filterTodos().map((todo) => (
         <Todo
           key={todo.id}
           task={todo}
@@ -57,6 +72,7 @@ export const TodoWrapper = () => {
           Clear Completed
         </button>
       </div>
+      <TodoFooter setFilterType={setFilterType} />
     </div>
   );
 };

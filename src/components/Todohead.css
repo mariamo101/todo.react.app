@@ -5,3 +5,7 @@
   min-width: 20.4375rem;
   height: 1.5rem;
 }
+.dark-mode .sun,
+.moonIcon {
+  cursor: pointer;
+}

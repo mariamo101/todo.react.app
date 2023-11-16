@@ -19,7 +19,8 @@
   margin: 0 0.75rem 0 0;
 }
 
-.checkButton:hover {
+.checkButton:hover,
+.iconCross {
   cursor: pointer;
 }
 .iconCheck {
@@ -32,7 +33,6 @@
   letter-spacing: -0.0167rem;
   overflow-wrap: break-word;
   white-space: normal;
-
   text-decoration: none;
 }
 .checkIcon.checked {
