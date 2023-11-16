@@ -22,7 +22,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 ### Links
 
 - Solution URL: [Solution URL here](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)
-- Live Site URL: [Live site URL here](https://todo-reac-app-mm.netlify.app/)
+- Live Site URL: [Live site URL here]((https://todo-react-app-six-orcin.vercel.app/))
 
 ### Built with
 
