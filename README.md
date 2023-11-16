@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Frontend Mentor - Interactive rating component solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help me improve my coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Gif](#Gif)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
-### `npm start`
+## Gif
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDN0ZjFwN2FybjIyZmYzOHB0YTl1NWQ1NHNubzBwdzAzbXNudmFtaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9inm9QLqs0SaHzmqkN/giphy.gif"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Screenshot
 
-### `npm test`
+<img width="1024" alt="Screenshot 2023-11-16 at 16 03 32" src="https://github.com/mariamo101/todo.react.app/assets/117212859/53dddf64-406c-4c8d-9374-e066b0407a15">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Links
 
-### `npm run build`
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)
+- Live Site URL: [Live site URL here](https://todo-reac-app-mm.netlify.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactor.bitcamp.ge/kvira-2-more-jsx-props-and-conditional-rendering.-re-rendering-and-state.-component-lifecycle/more-jsx-props-and-conditional-rendering.-re-rendering-and-state) - JS library
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### What I learned
 
-### `npm run eject`
+see below:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```jsx
+<div className="TodoWrapper">
+  <TodoForm addTodo={addTodo} />
+  {todos.map((todo) => (
+    <Todo
+      key={todo.id}
+      task={todo}
+      toggleCompleted={toggleCompleted}
+      deleteTodo={deleteTodo}
+      todos={todos}
+      setTodos={setTodos}
+    />
+  ))}
+  <div className="itemsOutLine">
+    <h3 className="items">
+      {itemsLeft} {itemsLeft === 1 ? "item left" : "items left"}
+    </h3>
+    <button className="clearCompleted" onClick={clearCompletedTodos}>
+      Clear Completed
+    </button>
+  </div>
+</div>
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Useful resources
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React.dev ](https://react.dev/learn/thinking-in-react) - This is an amazing web site which helped me finally understand jsx. I'd recommend it to anyone still learning this concept.
